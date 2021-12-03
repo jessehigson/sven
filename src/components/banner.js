@@ -63,7 +63,7 @@ export default class Banner extends React.Component {
               src="../images/banner.jpg"
               alt="A promotional shot of the Alternative/Emo band Sven"
               placeholder="blurred"
-              sizes="100vw"
+              sizes="(min-width: 45em) 120vw, 200vw"
             />
           </figure>
         </div>

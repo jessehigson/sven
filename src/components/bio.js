@@ -24,7 +24,7 @@ const Bio = () => (
 
       <div className="bio__column bio__column--image">
         <StaticImage
-          src="../images/bio.jpg"
+          src="../images/burn-recording.jpg"
           alt="A promotional shot of the Alternative/Emo band Sven"
           placeholder="blurred"
           className="bio__image"
