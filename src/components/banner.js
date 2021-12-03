@@ -12,13 +12,14 @@ const Banner = () => (
       </h3>
     </div>
 
-    <StaticImage
-      src="../images/banner.jpg"
-      alt="A promotional shot of the Alternative/Emo band Sven"
-      placeholder="blurred"
-      className="banner__image"
-      sizes="100vw"
-    />
+    <div className="banner__image">
+      <StaticImage
+        src="../images/banner.jpg"
+        alt="A promotional shot of the Alternative/Emo band Sven"
+        placeholder="blurred"
+        sizes="100vw"
+      />
+    </div>
   </section>
 )
 
