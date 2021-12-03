@@ -33,6 +33,10 @@
       position: relative
       width: .128205128205128em
 
+  &__link
+    @extend %button
+    margin: 1em 0 0
+
   &__image
     +cover
 
@@ -46,5 +50,5 @@
         background: linear-gradient(180deg, rgba($black, .1) 0%, rgba($black, .1) 75%, $black 100%)
 
     .gatsby-image-wrapper
-      height: 120%
-      width: auto
+      height: 120% // 100% + max parallax amount
+      width: 100%

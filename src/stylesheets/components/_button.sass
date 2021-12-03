@@ -1,0 +1,24 @@
+%button
+  +secondaryFont
+  background: $white
+  border: .125rem solid $white
+  border-radius: .125rem
+  color: $black
+  display: inline-flex
+  font-size: 1.111111111111111em
+  justify-content: center
+  letter-spacing: .05em
+  min-width: 7em
+  opacity: 1
+  padding: .75em 2em
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  transition: background $transitionDuration $transitionTimingFunction, color $transitionDuration $transitionTimingFunction
+
+  &:hover
+    background: none
+    color: $white
+
+.button
+  @extend %button
