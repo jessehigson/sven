@@ -9,7 +9,16 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`webp`],
+          quality: 90,
+          breakpoints: new Array(7).fill(0).map((_, i) => (i + 1) * 400),
+        },
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
