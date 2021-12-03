@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `Sven`,
@@ -6,33 +8,59 @@ module.exports = {
     siteUrl: `https://sven.band`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'sven-band',
+        short_name: 'sven',
+        start_url: '/',
+        background_color: '#000000',
+        theme_color: '#000000',
+        display: 'minimal-ui',
+        icon: path.resolve(__dirname, 'src', 'images', 'favicon.png'),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#000000`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        name: 'images',
+        path: path.resolve(__dirname, 'src', 'images'),
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
+    `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.sven.band',
+        sitemap: 'https://www.sven.band/sitemap/sitemap-index.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
   ],
 }
