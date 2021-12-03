@@ -1,0 +1,39 @@
+.merch
+  +gutters
+  +spacing
+
+  &__container
+    +cappedWidth
+
+  &__title
+    @extend %h1
+    margin: 0
+
+  &__top
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 0 0 1em
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 2em
+    justify-content: flex-start
+
+    &-item
+      flex: 0 0 100%
+
+      @media (min-width: $tablet)
+        flex-basis: calc(50% - (2em * (1/2)) - 1px)
+
+      @media (min-width: $smallDesktop)
+        flex-basis: calc(25% - (2em * (3/4)) - 1px)
+
+  .merch-item
+    &__link
+      +opacityHover
+
+    &__image
+      +imageRatio(128)
