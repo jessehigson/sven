@@ -1,0 +1,36 @@
+.footer
+  +gutters
+  +spacing
+  text-align: center
+
+  &__top
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @media (min-width: $smallDesktop)
+      flex-wrap: nowrap
+
+  &__column
+    flex: 0 0 100%
+
+    @media (min-width: $smallDesktop)
+      flex-basis: 33.33%
+
+      &:nth-of-type(1)
+        text-align: left
+
+      &:nth-of-type(3)
+        text-align: right
+
+  &__instagram
+    &-label,
+    &-handle
+      display: block
+
+    &-handle
+      @extend %h1
+      margin: 0
+
+  &__bottom
+    @extend %smallText

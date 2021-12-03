@@ -1,0 +1,101 @@
+@function between($from, $to, $fromWidth, $toWidth)
+  $slope: math.div($from - $to, $fromWidth - $toWidth)
+  $base: $to - $slope * $toWidth
+
+  @return calc(#{$base} + #{100vw * $slope})
+
+=clamp($property, $from, $to, $fromWidth, $toWidth)
+  #{$property}: $from
+
+  @media (min-width: $fromWidth)
+    #{$property}: between($from, $to, $fromWidth, $toWidth)
+
+  @media (min-width: $toWidth)
+    #{$property}: $to
+
+=primaryFont
+  font-family: $primaryFont
+
+=secondaryFont
+  font-family: $secondaryFont
+
+=cover($padding: 0)
+  bottom: $padding
+  left: $padding
+  position: absolute
+  right: $padding
+  top: $padding
+
+=gutterLeft
+  padding-left: $gutterMobile
+
+  @media (min-width: $tablet)
+    padding-left: $gutterTablet
+
+  @media (min-width: $smallDesktop)
+    padding-left: $gutterDesktop
+
+=gutterRight
+  padding-right: $gutterMobile
+
+  @media (min-width: $tablet)
+    padding-right: $gutterTablet
+
+  @media (min-width: $smallDesktop)
+    padding-right: $gutterDesktop
+
+=gutters
+  +gutterLeft
+  +gutterRight
+
+=spacingTop
+  padding-top: $gutterTablet
+
+  @media (min-width: $tablet)
+    padding-top: $gutterTablet
+
+  @media (min-width: $smallDesktop)
+    padding-top: $gutterDesktop
+
+=spacingBottom
+  padding-bottom: $gutterTablet
+
+  @media (min-width: $tablet)
+    padding-bottom: $gutterTablet
+
+  @media (min-width: $smallDesktop)
+    padding-bottom: $gutterDesktop
+
+=spacing
+  +spacingTop
+  +spacingBottom
+
+=opacityHover
+  transition: opacity $transitionDuration $transitionTimingFunction
+  opacity: 1
+
+  &:hover
+    opacity: $opacityHover
+
+=imageRatio($padding)
+  overflow: hidden
+  position: relative
+  height: 0
+  padding-top: ($padding * 1%)
+
+  .gatsby-image-wrapper
+    +cover
+
+=pseudoBasics
+  display: block
+  content: ""
+  position: absolute
+
+=unbutton
+  appearance: none
+  border: 0
+  background: none
+  font-family: inherit
+
+=productDropShadow
+  background: url(/img/dropshadow.png) bottom -10px center / contain no-repeat

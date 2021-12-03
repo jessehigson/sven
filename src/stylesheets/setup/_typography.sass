@@ -1,0 +1,98 @@
+@font-face
+  font-display: swap
+  font-family: 'Merriweather'
+  font-style: normal
+  font-weight: normal
+  src: url('./fonts/Merriweather-Regular.woff2') format('woff2')
+
+@font-face
+  font-display: swap
+  font-family: 'Helvetica LT UltraCompressed'
+  font-style: normal
+  font-weight: normal
+  src: url('./fonts/HelveticaLT-UltraCompressed.woff2') format('woff2')
+
+body
+  +primaryFont
+  +clamp('font-size', 14px, 18px, 375px, 1440px)
+  color: $white
+  line-height: $baseline
+
+%h0, %h1, %h2, %h3, %h4, %h5
+  +secondaryFont
+  --font-size: 1
+  --margin: calc(#{$baseline} / var(--font-size))
+  display: block
+  font-size: calc(var(--font-size) * 1em)
+  line-height: 1.2em
+  margin: 0 0 var(--margin)
+  text-transform: uppercase
+
+%h0, %h1, %h2, %h3, %h4
+  letter-spacing: -.02em
+
+%h1
+  --font-size: 1.471em
+  line-height: 1.706em
+
+  @media (min-width: $smallDesktop)
+    --font-size: 1.609em
+    line-height: 2.826em
+
+h1
+  @extend %h1
+
+%h2
+  --font-size: 1
+  line-height: 1.2em
+
+  @media (min-width: $smallDesktop)
+    --font-size: 1.4
+    line-height: 1.6em
+
+h2, h3, h4, h5
+  @extend %h2
+
+p
+  display: block
+  margin: 0 0 $baseline
+  width: 100%
+
+.screenreader-text
+  position: absolute
+  top: -9999vh
+  left: 0
+
+%smallText
+  font-size: 1em
+  line-height: 1.2em
+
+  @media (min-width: $smallDesktop)
+    font-size: .739em
+    line-height: 1.304
+
+a
+  color: inherit
+  cursor: pointer
+  transition: opacity .5s ease
+
+button
+  cursor: pointer
+
+ul, ol
+  margin: 0 0 $baseline
+
+ol
+  margin-left: $baseline
+
+ul
+  list-style: disc inside
+
+code
+  font-family: monospace
+
+small
+  @extend %smallText
+
+button
+  line-height: inherit
