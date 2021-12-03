@@ -35,10 +35,16 @@
 
   &__image
     +cover
-    position: absolute !important
-    z-index: -1
 
-    &::after
+    &-container
       +cover
-      +pseudoBasics
-      background: linear-gradient(180deg, rgba($black, .2) 0%, rgba($black, .2) 75%, $black 100%)
+      z-index: -1
+
+      &::after
+        +cover
+        +pseudoBasics
+        background: linear-gradient(180deg, rgba($black, .2) 0%, rgba($black, .2) 75%, $black 100%)
+
+    .gatsby-image-wrapper
+      height: auto
+      width: 100%

@@ -28,7 +28,6 @@ const Bio = () => (
           alt="A promotional shot of the Alternative/Emo band Sven"
           placeholder="blurred"
           className="bio__image"
-          sizes="(min-width: 63.75em) 50vw, 100vw"
         />
       </div>
     </div>

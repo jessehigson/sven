@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "decko": "^1.2.0",
     "gatsby": "^4.0.2",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
     "gatsby-plugin-image": "^2.0.0",
@@ -25,6 +26,9 @@
     "sass": "^1.44.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.14.2",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-gatsby": "^1.7.0",
     "dotenv": "^10.0.0",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
