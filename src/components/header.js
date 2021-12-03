@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
           <li className="social-links__list-item">
             <Link
               to="https://www.facebook.com/svenmusicuk"
-              className="header__logo-link"
+              className="social-links__link"
               rel="noopener"
               target="_blank"
             >
@@ -21,18 +21,18 @@ const Header = ({ siteTitle }) => (
           <li className="social-links__list-item">
             <Link
               to="https://twitter.com/svenmusicuk"
-              className="header__logo-link"
+              className="social-links__link"
               rel="noopener"
               target="_blank"
             >
-              Facebook
+              Twitter
             </Link>
           </li>
 
           <li className="social-links__list-item">
             <Link
               to="https://www.instagram.com/svenmusicuk/"
-              className="header__logo-link"
+              className="social-links__link"
               rel="noopener"
               target="_blank"
             >
@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
           <li className="social-links__list-item">
             <Link
               to="https://svenuk.bandcamp.com/"
-              className="header__logo-link"
+              className="social-links__link"
               rel="noopener"
               target="_blank"
             >
@@ -53,11 +53,13 @@ const Header = ({ siteTitle }) => (
         </ul>
       </div>
 
-      <h1 class="header__logo">
-        <Link to="/" className="header__logo-link">
-          {siteTitle}
-        </Link>
-      </h1>
+      <div className="header__logo-container">
+        <h1 class="header__logo">
+          <Link to="/" className="header__logo-link">
+            {siteTitle}
+          </Link>
+        </h1>
+      </div>
 
       <div className="header__contact">
         <Link

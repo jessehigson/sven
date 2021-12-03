@@ -1,0 +1,28 @@
+.banner
+  +gutters
+  +spacing
+
+  &__container
+    text-align: center
+
+  &__title,
+  &__sub-title
+    span
+      display: block
+      margin-right: -.75em // counter letter spacing from last letter
+
+  &__title
+    @extend %h0
+    align-items: center
+    display: flex
+    justify-content: center
+    
+    &::before,
+    &::after
+      +pseudoBasics
+      background: currentColor
+      border-radius: 50%
+      height: .128205128205128em
+      margin: 0 .5em
+      position: relative
+      width: .128205128205128em

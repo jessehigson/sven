@@ -24,12 +24,13 @@ body
   --margin: calc(#{$baseline} / var(--font-size))
   display: block
   font-size: calc(var(--font-size) * 1em)
-  line-height: 1.2em
+  letter-spacing: .75em
+  line-height: 1em
   margin: 0 0 var(--margin)
   text-transform: uppercase
 
-%h0, %h1, %h2, %h3, %h4
-  letter-spacing: -.02em
+%h0
+  --font-size: 4.333333333333333
 
 %h1
   --font-size: 1.471em
@@ -42,16 +43,11 @@ body
 h1
   @extend %h1
 
-%h2
-  --font-size: 1
-  line-height: 1.2em
+%h3
+  --font-size: 1.888888888888889
 
-  @media (min-width: $smallDesktop)
-    --font-size: 1.4
-    line-height: 1.6em
-
-h2, h3, h4, h5
-  @extend %h2
+h3
+  @extend %h3
 
 p
   display: block
@@ -64,12 +60,7 @@ p
   left: 0
 
 %smallText
-  font-size: 1em
-  line-height: 1.2em
-
-  @media (min-width: $smallDesktop)
-    font-size: .739em
-    line-height: 1.304
+  font-size: .88em
 
 a
   color: inherit

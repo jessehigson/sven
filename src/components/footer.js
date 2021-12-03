@@ -1,5 +1,5 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import * as React from 'react'
+import PropTypes from 'prop-types'
 
 const Footer = ({ siteTitle }) => (
   <footer className="footer">
@@ -8,13 +8,14 @@ const Footer = ({ siteTitle }) => (
         © {siteTitle} {new Date().getFullYear()}
       </span>
 
-      <div className="footer__credit-info">
-        Website by{" "}
+      <div className="footer__credit">
+        Website by{' '}
         <a
           href="https://www.jessehigson.com"
           rel="nofollow noopener"
           target="_blank"
           title="Website by Jesse Higson"
+          className="footer__credit-link"
         >
           Jesse Higson
         </a>
