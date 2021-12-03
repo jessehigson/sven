@@ -12,11 +12,17 @@
     align-items: center
     display: flex
     flex-wrap: nowrap
+    justify-content: center
 
   .social-links,
   &__logo-container,
   &__contact
     flex: 0 0 33.33%
+
+  .social-links,
+  &__contact
+    @media (max-width: $maxSmallDesktop)
+      display: none
 
   &__logo
     font-size: 2.666666666666667em
@@ -28,6 +34,7 @@
       text-align: center
 
     &-link
+      margin-right: -.75em // counter letter spacing from last letter
       text-decoration: none
 
   &__contact

@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
       <SocialLinks />
 
       <div className="header__logo-container">
-        <h1 class="header__logo">
+        <h1 className="header__logo">
           <Link to="/" className="header__logo-link">
             {siteTitle}
           </Link>
