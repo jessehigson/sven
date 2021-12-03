@@ -24,7 +24,7 @@ body
   --margin: calc(#{$baseline} / var(--font-size))
   display: block
   font-size: calc(var(--font-size) * 1em)
-  letter-spacing: .75em
+  letter-spacing: .05em
   line-height: 1em
   margin: 0 0 var(--margin)
   text-transform: uppercase
@@ -33,12 +33,7 @@ body
   --font-size: 4.333333333333333
 
 %h1
-  --font-size: 1.471em
-  line-height: 1.706em
-
-  @media (min-width: $smallDesktop)
-    --font-size: 1.609em
-    line-height: 2.826em
+  --font-size: 3
 
 h1
   @extend %h1
