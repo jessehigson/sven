@@ -6,6 +6,7 @@
   justify-content: center
   position: relative
   min-height: 80vh
+  overflow: hidden
 
   &__container
     text-align: center
@@ -34,6 +35,7 @@
 
   &__image
     +cover
+    position: absolute !important
     z-index: -1
 
     &::after
