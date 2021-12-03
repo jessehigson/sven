@@ -1,6 +1,11 @@
 .banner
   +gutters
   +spacing
+  align-items: center
+  display: flex
+  justify-content: center
+  position: relative
+  min-height: 80vh
 
   &__container
     text-align: center
@@ -26,3 +31,12 @@
       margin: 0 .5em
       position: relative
       width: .128205128205128em
+
+  &__image
+    +cover
+    z-index: -1
+
+    &::after
+      +cover
+      +pseudoBasics
+      background: linear-gradient(180deg, rgba($black, .2) 0%, rgba($black, .2) 75%, $black 100%)

@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image'
 import * as React from 'react'
 
 const Banner = () => (
@@ -10,6 +11,13 @@ const Banner = () => (
         <span>Out now</span>
       </h3>
     </div>
+
+    <StaticImage
+      src="../images/banner.jpg"
+      alt="A promotional shot of the Alternative/Emo band Sven"
+      placeholder="blurred"
+      className="banner__image"
+    />
   </section>
 )
 
