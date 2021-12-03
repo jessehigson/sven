@@ -8,7 +8,7 @@ const TourDates = () => (
 
       <a
         href="https://www.songkick.com/artists/27184"
-        class="songkick-widget"
+        className="songkick-widget"
         data-theme="dark"
         data-track-button="on"
         data-detect-style="true"
@@ -18,7 +18,7 @@ const TourDates = () => (
       ></a>
 
       <Helmet>
-        <script src="//widget.songkick.com/27184/widget.js"></script>
+        <script src="//widget.songkick.com/27184/widget.js" defer></script>
       </Helmet>
     </div>
   </section>
