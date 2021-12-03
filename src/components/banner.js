@@ -57,7 +57,7 @@ export default class Banner extends React.Component {
         <div className="banner__image-container">
           <figure
             className="banner__image"
-            style={{ transform: `translateY(${position * 30}%)` }}
+            style={{ transform: `translateY(${position * 20}%)` }}
           >
             <StaticImage
               src="../images/banner.jpg"
