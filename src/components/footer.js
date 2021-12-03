@@ -1,9 +1,17 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import SocialLinks from './social-links'
+import ContactLink from './contact-link'
 
 const Footer = ({ siteTitle }) => (
   <footer className="footer">
+    <hr />
+
     <div className="footer__container">
+      <ContactLink />
+
+      <SocialLinks />
+
       <span className="footer__copyright">
         © {siteTitle} {new Date().getFullYear()}
       </span>

@@ -17,6 +17,7 @@ const Banner = () => (
       alt="A promotional shot of the Alternative/Emo band Sven"
       placeholder="blurred"
       className="banner__image"
+      sizes="100vw"
     />
   </section>
 )

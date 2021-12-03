@@ -1,0 +1,19 @@
+.bio
+  +gutters
+  +spacingBottom
+
+  &__container
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    gap: 2em
+
+    @media (min-width: $smallDesktop)
+      flex-wrap: nowrap
+      gap: 4em
+
+  &__column
+    flex: 0 0 100%
+
+    @media (min-width: $smallDesktop)
+      flex-basis: calc(50% - (4em * 1/2))

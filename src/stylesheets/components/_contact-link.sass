@@ -1,0 +1,15 @@
+.contact-link
+  @extend %h3
+  font-size: 2em
+  letter-spacing: .05em
+  line-height: 1em
+  margin: 0
+  text-align: center
+
+  @media (min-width: $smallDesktop)
+    font-size: 1.444444444444444em
+    text-align: right
+
+  &__link
+    +opacityHover
+    text-decoration: none

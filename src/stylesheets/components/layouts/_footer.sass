@@ -1,8 +1,24 @@
 .footer
   +gutters
-  +spacing
   @extend %smallText
   text-align: center
+
+  hr
+    color: rgba($white, .2)
+
+  &__container
+    padding: 1em 0
+
+  .contact-link,
+  .social-links
+    @media (min-width: $smallDesktop)
+      display: none
+
+  .social-links
+    margin: 1em 0
+
+    &__list
+      justify-content: center
 
   &__credit
     &-link

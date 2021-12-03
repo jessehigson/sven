@@ -2,6 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import SocialLinks from './social-links'
+import ContactLink from './contact-link'
 
 const Header = ({ siteTitle }) => (
   <header className="header">
@@ -16,14 +17,7 @@ const Header = ({ siteTitle }) => (
         </h1>
       </div>
 
-      <div className="header__contact">
-        <Link
-          to="mailto:svenmusicuk@gmail.com"
-          className="header__contact-link"
-        >
-          Contact
-        </Link>
-      </div>
+      <ContactLink />
     </div>
   </header>
 )

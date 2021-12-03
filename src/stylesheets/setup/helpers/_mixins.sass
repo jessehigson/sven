@@ -66,9 +66,31 @@
   @media (min-width: $smallDesktop)
     padding-bottom: $gutterDesktop
 
+=spacingTopDouble
+  padding-top: ($gutterTablet * 2)
+
+  @media (min-width: $tablet)
+    padding-top: ($gutterTablet * 2)
+
+  @media (min-width: $smallDesktop)
+    padding-top: ($gutterDesktop * 2)
+
+=spacingBottomDouble
+  padding-bottom: ($gutterTablet * 2)
+
+  @media (min-width: $tablet)
+    padding-bottom: ($gutterTablet * 2)
+
+  @media (min-width: $smallDesktop)
+    padding-bottom: ($gutterDesktop * 2)
+
 =spacing
   +spacingTop
   +spacingBottom
+
+=spacingDouble
+  +spacingTopDouble
+  +spacingBottomDouble
 
 =opacityHover
   transition: opacity $transitionDuration $transitionTimingFunction

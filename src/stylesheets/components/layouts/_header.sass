@@ -1,5 +1,6 @@
 .header
   +gutters
+  background: linear-gradient(180deg, rgba($black, .9) 0%, rgba($black, 0) 100%)
   left: 0
   padding-bottom: 1em
   padding-top: 1em
@@ -15,12 +16,12 @@
     justify-content: center
 
   .social-links,
-  &__logo-container,
-  &__contact
+  .contact-link,
+  &__logo-container
     flex: 0 0 33.33%
 
   .social-links,
-  &__contact
+  .contact-link
     @media (max-width: $maxSmallDesktop)
       display: none
 
@@ -35,16 +36,4 @@
 
     &-link
       margin-right: -.75em // counter letter spacing from last letter
-      text-decoration: none
-
-  &__contact
-    @extend %h3
-    font-size: 1.444444444444444em
-    letter-spacing: .05em
-    line-height: 1em
-    margin: 0
-    text-align: right
-
-    &-link
-      +opacityHover
       text-decoration: none
