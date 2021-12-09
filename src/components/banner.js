@@ -56,7 +56,7 @@ export default class Banner extends React.Component {
           </h3>
 
           <Link
-            to="https://www.youtube.com/channel/UCDPyOqv8uXv9JkBeKblxpNw"
+            to="https://youtu.be/fk2j5e6vyZY"
             className="banner__link"
             rel="noopener"
             target="_blank"
