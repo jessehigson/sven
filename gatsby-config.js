@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: `Sven`,
-    description: `Sven are an Alternative/Emo band from Portsmouth, UK, listen to their latest single Burn out now.`,
+    description: `Sven are an Alternative/Emo band from Portsmouth, UK, their latest single Burn is due to be released 11th March 2022.`,
     author: `@svenmusicuk`,
     siteUrl: `https://sven.band`,
   },
