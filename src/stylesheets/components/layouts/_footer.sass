@@ -9,16 +9,12 @@
   &__container
     padding: 1em 0
 
-  .contact-link,
-  .social-links
+  &__link
+    &:not(:last-child)
+      margin-bottom: 0.5em
+
     @media (min-width: $smallDesktop)
       display: none
-
-  .social-links
-    margin: 1em 0
-
-    &__list
-      justify-content: center
 
   &__credit
     &-link

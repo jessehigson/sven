@@ -16,18 +16,13 @@
     flex-wrap: nowrap
     justify-content: center
 
-  .social-links,
-  .contact-link,
+  &__link,
   &__logo-container
     flex: 0 0 33.33%
 
-  .social-links,
-  .contact-link
+  &__link
     @media (max-width: $maxSmallDesktop)
       display: none
-
-  .social-links
-    margin-left: -1.666666666666667em // offset $minTouchSize
 
   &__logo
     font-size: 2.666666666666667em

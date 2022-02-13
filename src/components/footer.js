@@ -1,16 +1,28 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import SocialLinks from './social-links'
-import ContactLink from './contact-link'
+import { Link } from 'gatsby'
 
 const Footer = ({ siteTitle }) => (
   <footer className="footer">
     <hr />
 
     <div className="footer__container">
-      <ContactLink />
+      <div className="footer__link header-link">
+        <Link
+          to="https://linktr.ee/svenmusicuk"
+          rel="nofollow noopener"
+          target="_blank"
+          className="header-link__link"
+        >
+          Linktree
+        </Link>
+      </div>
 
-      <SocialLinks />
+      <div className="footer__link header-link">
+        <Link to="mailto:svenmusicuk@gmail.com" className="header-link__link">
+          Contact
+        </Link>
+      </div>
 
       <span className="footer__copyright">
         © {siteTitle} {new Date().getFullYear()}
