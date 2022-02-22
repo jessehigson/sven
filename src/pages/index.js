@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import Banner from '../components/banner'
 import TourDates from '../components/tour-dates'
 import Bio from '../components/bio'
-import Merch from '../components/merch'
+// import Merch from '../components/merch'
 
 const IndexPage = () => (
   <Layout>
@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Banner />
     <Bio />
     <TourDates />
-    <Merch />
+    {/* <Merch /> */}
   </Layout>
 )
 
