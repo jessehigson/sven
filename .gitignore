@@ -36,6 +36,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Ignore NPM lock file. Use yarn
+/package-lock.json
+
 # Typescript v1 declaration files
 typings/
 
@@ -51,10 +54,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variables file
-.env
-.env.*
-!.env.example
+# dotenv environment variable files
+.env*
+!.env.dist
 
 # gatsby files
 .cache/
@@ -62,14 +64,16 @@ public
 
 # Mac files
 .DS_Store
+.idea
 
 # Yarn
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
 
-# Other
-.vscode
-.idea
+# Netlify CLI
+/.netlify
+
