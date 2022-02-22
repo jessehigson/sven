@@ -55,16 +55,10 @@ export default class Banner extends React.Component {
             <span>11.03.22</span>
           </h3>
 
-          <Link
-            to="https://youtu.be/fk2j5e6vyZY"
-            className="banner__link"
-            rel="noopener"
-            target="_blank"
-          >
-            <span aria-hidden="true">Watch Video</span>
+          <Link to="" className="banner__link" rel="noopener" target="_blank">
+            <span aria-hidden="true">Pre-Save</span>
             <span className="screenreader-text">
-              Watch the video for Alternative/Emo band Sven's latest single
-              'Burn'
+              Pre-Save the Alternative/Emo band Sven's latest single 'Burn'
             </span>
           </Link>
         </div>
