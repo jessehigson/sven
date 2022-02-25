@@ -4,9 +4,9 @@
   align-items: center
   display: flex
   justify-content: center
-  position: relative
   min-height: 90vh
   overflow: hidden
+  position: relative
 
   &__container
     text-align: center
@@ -38,6 +38,9 @@
   &__link
     @extend %button
     margin: 1em 0 0
+
+    &:not(:last-child)
+      margin-right: 1em
 
   &__image
     +cover

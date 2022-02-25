@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import React, { createRef } from 'react'
-import { bind, debounce } from 'decko'
+import { bind } from 'decko'
 import { Link } from 'gatsby'
 
 export default class Banner extends React.Component {
@@ -55,10 +55,28 @@ export default class Banner extends React.Component {
             <span>11.03.22</span>
           </h3>
 
-          <Link to="" className="banner__link" rel="noopener" target="_blank">
+          <Link
+            to="https://ditto.fm/burn-sven"
+            className="banner__link"
+            rel="noopener"
+            target="_blank"
+          >
             <span aria-hidden="true">Pre-Save</span>
             <span className="screenreader-text">
               Pre-Save the Alternative/Emo band Sven's latest single 'Burn'
+            </span>
+          </Link>
+
+          <Link
+            to="https://youtu.be/fk2j5e6vyZY"
+            className="banner__link"
+            rel="noopener"
+            target="_blank"
+          >
+            <span aria-hidden="true">Watch Video</span>
+            <span className="screenreader-text">
+              Watch the video for the Alternative/Emo band Sven's latest single
+              'Burn'
             </span>
           </Link>
         </div>
