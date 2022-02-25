@@ -16,7 +16,11 @@ body
   +primaryFont
   +clamp('font-size', 14px, 18px, 375px, 1440px)
   color: $white
+  font-smooth: always
   line-height: $baseline
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
 
 %h0, %h1, %h2, %h3, %h4, %h5
   +secondaryFont
