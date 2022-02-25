@@ -77,5 +77,6 @@ module.exports = {
         pixelId: '369544968064814',
       },
     },
+    'gatsby-plugin-netlify',
   ],
 }
