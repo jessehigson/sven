@@ -60,7 +60,7 @@ module.exports = {
       options: {
         host: 'https://www.sven.band',
         sitemap: 'https://www.sven.band/sitemap/sitemap-index.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
+        resolveEnv: () => process.env.NODE_ENV,
         env: {
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }],
