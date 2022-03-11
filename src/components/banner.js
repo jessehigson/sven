@@ -61,9 +61,9 @@ export default class Banner extends React.Component {
             rel="noopener"
             target="_blank"
           >
-            <span aria-hidden="true">Pre-Save</span>
+            <span aria-hidden="true">Stream</span>
             <span className="screenreader-text">
-              Pre-Save the Alternative/Emo band Sven's latest single 'Burn'
+              Stream the Alternative/Emo band Sven's latest single 'Burn'
             </span>
           </Link>
 
