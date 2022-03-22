@@ -52,7 +52,7 @@ export default class Banner extends React.Component {
           </h2>
 
           <h3 className="banner__sub-title">
-            <span>11.03.22</span>
+            <span>Out Now</span>
           </h3>
 
           <Link
